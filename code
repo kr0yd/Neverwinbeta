@@ -1,0 +1,59 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local NeverWin = Instance.new("ScreenGui")
+local LoginFrame = Instance.new("Frame")
+local NeverwinTitle = Instance.new("TextLabel")
+local Key = Instance.new("TextBox")
+local Start = Instance.new("TextButton")
+
+--Properties:
+
+NeverWin.Name = "NeverWin"
+NeverWin.Parent = game.CoreGui
+
+LoginFrame.Name = "Login Frame"
+LoginFrame.Parent = NeverWin
+LoginFrame.Active = true
+LoginFrame.BackgroundColor3 = Color3.fromRGB(50, 74, 85)
+LoginFrame.Position = UDim2.new(0.401454538, 0, 0.282352954, 0)
+LoginFrame.Size = UDim2.new(0, 240, 0, 290)
+LoginFrame.Active = true
+LoginFrame.Draggable = true
+
+NeverwinTitle.Name = "NeverwinTitle"
+NeverwinTitle.Parent = LoginFrame
+NeverwinTitle.BackgroundColor3 = Color3.fromRGB(20, 52, 56)
+NeverwinTitle.Size = UDim2.new(0, 240, 0, 46)
+NeverwinTitle.Font = Enum.Font.Ubuntu
+NeverwinTitle.Text = "NEVERWIN"
+NeverwinTitle.TextColor3 = Color3.fromRGB(73, 139, 145)
+NeverwinTitle.TextSize = 40.000
+
+Key.Name = "Key"
+Key.Parent = LoginFrame
+Key.BackgroundColor3 = Color3.fromRGB(20, 52, 56)
+Key.Position = UDim2.new(0.0833333358, 0, 0.358620703, 0)
+Key.Size = UDim2.new(0, 200, 0, 50)
+Key.Font = Enum.Font.Ubuntu
+Key.Text = "KEY"
+Key.TextColor3 = Color3.fromRGB(73, 139, 145)
+Key.TextSize = 30.000
+
+Start.Name = "Start"
+Start.Parent = LoginFrame
+Start.BackgroundColor3 = Color3.fromRGB(20, 52, 56)
+Start.Position = UDim2.new(0.291666657, 0, 0.672413826, 0)
+Start.Size = UDim2.new(0, 100, 0, 40)
+Start.Font = Enum.Font.Ubuntu
+Start.Text = "START"
+Start.TextColor3 = Color3.fromRGB(73, 139, 145)
+Start.TextSize = 14.000
+Start.MouseButton1Down:connect(function()
+	if Key.Text == "12345" or "rinussy" or "5678" or "kari12345" then
+		LoginFrame.Visible = false
+		loadstring(game:HttpGet("https://pastebin.com/raw/A2LU35aZ", true))()
+	end
+end)
